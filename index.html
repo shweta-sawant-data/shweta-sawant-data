@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shweta Sawant | Data Analyst Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        nav h2 {
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #4b5563;
+            max-width: 700px;
+        }
+
+        .skills-line {
+            margin: 25px 0;
+            font-weight: bold;
+            color: #374151;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        section {
+            padding: 75px 8%;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 35px;
+            color: #111827;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about p {
+            max-width: 850px;
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .skill-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            background: #f1f5f9;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 3px;
+            font-size: 13px;
+        }
+
+        .education-card,
+        .certificate-card,
+        .experience-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            max-width: 850px;
+        }
+
+        .education-card h3,
+        .certificate-card h3,
+        .experience-card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .contact {
+            background: #111827;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0f172a;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Shweta Sawant</h2>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Hi, I'm Shweta Sawant</h1>
+
+        <h2>Aspiring Data Analyst</h2>
+
+        <p>
+            I enjoy working with data, finding meaningful insights,
+            and creating clear and interactive dashboards that help
+            understand business performance.
+        </p>
+
+        <div class="skills-line">
+            SQL | Power BI | Excel | Python | Tableau | Data Visualization
+        </div>
+
+        <a href="#projects" class="btn">View My Projects</a>
+
+        <a href="#contact" class="btn">Let's Connect</a>
+
+    </div>
+</section>
+
+
+<section id="about" class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I'm Shweta Dipak Sawant, an aspiring Data Analyst currently
+        pursuing my MBA with a specialization in IT & HR.
+    </p>
+
+    <br>
+
+    <p>
+        I have completed my B.Com in Information Technology and have
+        developed practical knowledge of Excel, SQL, Power BI, Python,
+        Tableau, DAX, and data visualization.
+    </p>
+
+    <br>
+
+    <p>
+        I enjoy transforming raw data into meaningful information
+        and presenting insights through simple and interactive
+        dashboards.
+    </p>
+
+    <br>
+
+    <p>
+        I am currently looking for a fresher or entry-level Data
+        Analyst opportunity where I can apply my skills, work on
+        real-world business problems, and continue learning.
+    </p>
+
+</section>
+
+
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>Data Analysis</h3>
+            <p>
+                Data Cleaning, Data Validation, Exploratory Analysis,
+                KPI Analysis and Business Analysis.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>SQL</h3>
+            <p>
+                SQL and MySQL for filtering, aggregation, joins
+                and analyzing business data.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Power BI</h3>
+            <p>
+                Interactive dashboards, KPI cards, DAX,
+                charts and business performance analysis.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Excel</h3>
+            <p>
+                Data cleaning, formulas, Pivot Tables,
+                lookups, charts and analysis.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Python</h3>
+            <p>
+                Python fundamentals and data analysis concepts.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Data Visualization</h3>
+            <p>
+                Creating clear visualizations and dashboards
+                to communicate business insights.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects" class="projects">
+
+    <h2>Featured Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+
+            <h3>AI Impact on Manufacturing Performance</h3>
+
+            <p>
+                A Power BI business analytics project comparing
+                manufacturing performance before and after AI
+                implementation.
+            </p>
+
+            <p>
+                The analysis focuses on production, defects,
+                downtime, maintenance cost, efficiency and
+                other important manufacturing KPIs.
+            </p>
+
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Business Analytics</span>
+            <span class="tag">Data Visualization</span>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Coffee Shop Sales Dashboard</h3>
+
+            <p>
+                An interactive sales dashboard designed to analyze
+                coffee shop sales performance, product performance,
+                orders and sales trends.
+            </p>
+
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Sales Analytics</span>
+            <span class="tag">Dashboard</span>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Uber Trip Analysis</h3>
+
+            <p>
+                A data analysis project focused on understanding
+                Uber trip trends, travel patterns, trip activity
+                and time-based performance.
+            </p>
+
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Visualization</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2>Internship Experience</h2>
+
+    <div class="experience-card">
+
+        <h3>Data Science & AI Intern</h3>
+
+        <p><strong>Nathwave Nexgen, Kolhapur</strong></p>
+
+        <br>
+
+        <p>
+            Gained practical exposure to data and AI-related work
+            and worked on a project involving data analysis and
+            application of analytical concepts.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2>Certifications</h2>
+
+    <div class="certificate-card">
+
+        <h3>Microsoft — Data Analyst</h3>
+
+        <p>
+            Certification focused on data analysis and analytical skills.
+        </p>
+
+    </div>
+
+    <div class="certificate-card">
+
+        <h3>30 Days Power BI</h3>
+
+        <p>
+            Practical learning focused on Power BI and dashboard development.
+        </p>
+
+    </div>
+
+    <div class="certificate-card">
+
+        <h3>Tata — GenAI Powered Data Analytics Job Simulation</h3>
+
+        <p>
+            Completed a job simulation focused on applying Generative AI
+            to data analytics tasks.
+        </p>
+
+    </div>
+
+    <div class="certificate-card">
+
+        <h3>Microsoft — Introduction to Image Generation</h3>
+
+        <p>
+            Completed learning focused on image generation concepts.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="education-card">
+
+        <h3>MBA — IT & HR</h3>
+
+        <p>
+            SGM College, Karad
+        </p>
+
+        <p>
+            Expected Completion: 2027
+        </p>
+
+    </div>
+
+    <div class="education-card">
+
+        <h3>B.Com — Information Technology</h3>
+
+        <p>
+            SGM College, Karad | Shivaji University
+        </p>
+
+        <p>
+            Completed: 2025 | Percentage: 65.69%
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2>My Approach to Data</h2>
+
+    <div class="education-card">
+
+        <h3>Raw Data → Clean Data → Analyze → Visualize → Insights</h3>
+
+        <p>
+            I believe a good dashboard should not only look attractive.
+            It should answer important business questions and make
+            data easier to understand and use for decision-making.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        I'm currently looking for fresher and entry-level
+        Data Analyst opportunities.
+    </p>
+
+    <p>
+        📍 Preferred Location: Pune / Remote
+    </p>
+
+    <p>
+        🔗 LinkedIn:
+        <a href="https://www.linkedin.com/in/shweta-sawant-79758b384/"
+           target="_blank">
+           View My LinkedIn
+        </a>
+    </p>
+
+    <p>
+        📧 Email:
+        <a href="mailto:YOUR-EMAIL@example.com">
+            YOUR-EMAIL@example.com
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+
+    © 2026 Shweta Dipak Sawant |
+    Aspiring Data Analyst
+
+</footer>
+
+</body>
+</html>
